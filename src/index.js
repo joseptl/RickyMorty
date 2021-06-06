@@ -16,5 +16,7 @@ const filtro=()=>{
     return busqueda
 }
 $formButtom.addEventListener("click",function(){
+    const $container=document.querySelector(".characterList")
+    $container.innerHTML=`<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`
     printCharacter(filtro())
 })
