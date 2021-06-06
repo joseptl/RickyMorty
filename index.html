@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-Title">Rick and Morty </h1>
+        <p class="header-p">Character List</p>
+    </header>
+    <div class="container-buscador">
+        <h2>Searcher</h2>
+        <form action="">
+            <div class="container-input">
+                <label for="name">Name <input placeholder="Name" class="formInput textInput" type="text" name="name" id="inputName"></label>
+            </div>
+            <div class="container-select">
+                <select class="formInput formSelect" name="status" id="inputStatus">
+                    <option class="disabled" disabled selected value="">Status</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                    <option value="unknown">unknown</option>
+                </select>
+                <select class="formInput formSelect" name="gender" id="inputGender">
+                    <option class="disabled"disabled selected value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="genderless">Genderless</option>
+                    <option value="unknown">unknown</option>
+                </select>
+            </div>           
+            <input class="formButton" type="button" value="Search">
+        </form>
+    </div>
+    <div class="container-characterList">
+        <div class="characterList">
+            
+        </div>
+    </div>
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>

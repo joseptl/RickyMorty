@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    background: url("https://wallpaperaccess.com/full/831780.png");
+}
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    font-family: 'Limelight', cursive;
+}
+.header{
+    height: 4em;
+    background-color: #222;
+    
+}
+.header-Title{
+    margin-left: .5em;
+    color:#97ce4c;
+}
+.header-p{
+    color:#97ce4c;
+    margin-left: 1em;
+}
+.container-buscador{
+    margin-top: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.container-buscador h2{
+    color:white;
+    margin-bottom: 1rem;
+    font-weight:900;
+    font-size: 2em;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+label{
+    color:#fff;
+    font-weight: bold;
+}
+.formInput{
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
+.container-input{
+    display: block;
+    text-align: center;
+}
+.textInput{
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #79a53b;
+    background:#97ce4c55;
+    color: white;
+}
+.textInput::placeholder{
+    color: #bbb;
+}
+.container-select{
+    margin-top: .6em;
+    text-align: center;
+}
+.formSelect{
+    background-color: #97ce4c66;
+    color: white;
+}
+.formSelect option{
+    background-color: #79a53b;
+}
+.formSelect option:disabled{
+    background-color: #79a53b;
+}
+.disabled{
+    display: none;
+}
+.formButton{
+    background-color: #97ce4caa;
+    padding:1em;
+    color: black;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 1em;
+    height: 3.5em;
+    width: 6em;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    cursor:pointer;
+}
+
+.container-characterList{
+    margin-top: 1em;
+    width: 100vw;
+    height: 30em;
+    background-color: #ffffff0f;
+    overflow-y: auto;
+}
+.characterList{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-character{
+    border: 1px solid #97ce4c;
+    color: #fff;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.container-character-data{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.container-character_Containerimage{
+    padding-left: 0.5em;
+}
+.container-character_Containerimage img{
+    margin-top:0.3em;
+    width: 7em;
+    height: 7em;
+    align-self: center;
+    object-fit: contain;
+    text-align: center;
+}
+.container-character_info{
+    list-style: none;
+    width: 12em;
+}
+.container-character_info ul{
+    list-style: none;
+}
+.formButton:active{
+    background: linear-gradient(#97ce4c, #333);
+}
+
+
+
+@media(min-width:768px){
+    .container-characterList{
+        width: 80%;
+        height: 28em;
+        margin: auto;
+        margin-top: 1em;
+        padding: auto;
+    }
+    .container-character{
+        border: 1px solid #97ce4c;
+        color: #fff;
+        width: 45%;
+        background-color: #000;
+        display: flex;
+        margin-bottom: 1em;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .container-character_Containerimage img{
+        border-radius: 5px;
+        width: 6.5em;
+        height: 6.5em;
+        align-self: center;
+        object-fit: contain;
+        text-align: center;
+    }
+    .characterList{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container-character_info{
+        width: 8em;
+    }
+    .container-characterList::-webkit-scrollbar {
+        width: 5px;     /* Tamaño del scroll en vertical */
+        height: 100%;    /* Tamaño del scroll en horizontal */
+    }
+    .container-characterList::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+    .container-characterList::-webkit-scrollbar-thumb:hover {
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
