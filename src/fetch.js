@@ -4,14 +4,18 @@ export async function getCharactersByName (filtro){
     const data = await fetch(`${url}/${filtro}`)
     const lista = await data.json()
     return lista.results
+    
+    
 }
 
 export async function printCharacter(filtro){
+
     const listaPersonajes = document.querySelector(".characterList")
     const $fragmento = document.createDocumentFragment();
-    const personajes = getCharactersByName(filtro)
-    const lista = await personajes
-    lista.forEach(element => {
+    try{
+        const personajes = getCharactersByName(filtro)
+        const lista = await personajes
+        lista.forEach(element => {
         const $contenedor=document.createElement("div");
         $contenedor.classList.add("container-character");
         const $contenedorData=document.createElement("div");
@@ -37,6 +41,17 @@ export async function printCharacter(filtro){
         $contenedor.appendChild($contenedorData)
         $fragmento.appendChild($contenedor);
     });
+    
+    }
+    catch(err){
+        const $containerError = document.createElement("div");
+        $containerError.classList.add("containerError");
+        const $error = document.createElement("p");
+        $error.classList.add("error")
+        $error.append("No se han encontrado resultados")
+        $containerError.appendChild($error)
+        $fragmento.appendChild($containerError)
+    }
     listaPersonajes.innerHTML="";
     listaPersonajes.appendChild($fragmento);
 }
