@@ -9,7 +9,6 @@ export async function getCharactersByName (filtro){
 }
 
 export async function printCharacter(filtro){
-
     const listaPersonajes = document.querySelector(".characterList")
     const $fragmento = document.createDocumentFragment();
     try{
