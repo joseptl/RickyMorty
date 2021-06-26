@@ -1,6 +1,7 @@
 import printCharacter from "./fetch.js";
 const $formButtom=document.querySelector(".formButton");
 const filtro=()=>{
+    console.log("prueba")
     let busqueda=`?`
     let cont=0
     const lista = [...document.querySelectorAll(".formInput")]
